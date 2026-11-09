@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="A selection of singers and some of their standout songs.">
+    <title>Singer Spotlight</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <style>
+        .album-art-preview {
+            width: 100%;
+            aspect-ratio: 1;
+            object-fit: cover;
+        }
+    </style>
+    <script src="js/main.js" defer></script>
+</head>
+<body class="bg-light">
+    <main class="container py-4">
+        <header class="mb-4">
+            <h1 class="display-5">Singer Spotlight</h1>
+            <p class="lead mb-0">A few favorite artists, a standout song, and a little background.</p>
+        </header>
+
+        <div class="row g-4 align-items-start">
+            <section class="col-sm-4" aria-label="Album art preview">
+                <figure class="mb-0">
+                    <img id="album-art-preview" src="images/astrid.jpg"
+                        class="img-fluid album-art-preview rounded shadow-sm" alt="Album art for Astrid by Glaive">
+                    <figcaption id="album-art-caption" class="form-text mt-2" aria-live="polite">
+                        Astrid by Glaive
+                    </figcaption>
+                </figure>
+            </section>
+
+            <section class="col-sm-8" aria-labelledby="singers-heading">
+                <h2 id="singers-heading" class="h3">Featured singers</h2>
+                <div class="table-responsive">
+                    <table class="table table-striped table-hover table-bordered align-middle">
+                        <caption class="caption-top">Standout songs and background details</caption>
+                        <thead class="table-dark">
+                            <tr>
+                                <th scope="col">Singer</th>
+                                <th scope="col">Standout song</th>
+                                <th scope="col">Date of birth</th>
+                                <th scope="col">Hometown</th>
+                            </tr>
+                        </thead>
+                        <tbody id="singer-table-body"></tbody>
+                    </table>
+                </div>
+            </section>
+        </div>
+    </main>
+</body>
+</html>
